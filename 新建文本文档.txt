@@ -1,0 +1,42 @@
+import QtQuick 2.4
+import QtQuick.Layouts 1.3
+import QtQuick.Controls 1.4
+Item {
+
+    RowLayout{
+       anchors.fill: parent
+        Button{
+            id:autoremove
+            width: 100
+            height: 100
+            iconSource: pressed ?"qrc:/resourse/autoremove.png":"qrc:/resourse/自动出库_按下效果.png"
+        }
+        Button{
+            id:autoenterin
+            width: 100
+            height: 100
+            iconSource: pressed ?"qrc:/resourse/自动移库.png":"qrc:/resourse/自动移库_按下效果.png"
+        }
+        Button{
+            id:cylinderscontrol
+            width: 100
+            height: 100
+            iconSource: pressed ?"qrc:/resourse/气缸控制.png":"qrc:/resourse/气缸控制_按下效果.png"
+        }
+        Button{
+            id:querymessage
+            width: 100
+            height: 100
+            iconSource: pressed ?"qrc:/resourse/信息查询.png":"qrc:/resourse/信息查询_按下效果.png"
+        }
+        Button{
+            id:exchangeroute
+            width: 100
+            height: 100
+            iconSource: pressed ?"qrc:/resourse/线路切换.png":"qrc:/resourse/线路切换_按下效果.png"
+        }
+
+
+    }
+}
+
