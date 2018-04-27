@@ -1,8 +1,6 @@
 <RCC>
     <qresource prefix="/">
         <file>main.qml</file>
-        <file>Bottomicon.qml</file>
-        <file>Toolbar.qml</file>
         <file>resourse/Dialog/出库口底图.png</file>
         <file>resourse/Dialog/底图-不带字.png</file>
         <file>resourse/Dialog/底图-带字.png</file>
@@ -171,5 +169,16 @@
         <file>resourse/还原.png</file>
         <file>resourse/还原黑.png</file>
         <file>Cellview.qml</file>
+        <file>Toplogo.qml</file>
+        <file>Menubtn.qml</file>
+        <file>Menubtnitem.qml</file>
+        <file>Statusbar.qml</file>
+        <file>Statusitem.qml</file>
+        <file>Labelarea.qml</file>
+        <file>Labelitem.qml</file>
+        <file>Taskarea.qml</file>
+        <file>Tasklistview.qml</file>
+        <file>Tasklistmodel.qml</file>
+        <file>Test_taskarea.qml</file>
     </qresource>
 </RCC>
