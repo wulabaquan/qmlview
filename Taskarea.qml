@@ -20,6 +20,10 @@ Rectangle {
         Label {
             id: label
             text: qsTr("任务列表")
+            Layout.maximumHeight: 30
+            Layout.fillHeight: true
+            Layout.fillWidth: true
+            verticalAlignment: Text.AlignVCenter
             color: "lightblue"
             horizontalAlignment: Text.AlignHCenter
             Layout.preferredHeight: 20
@@ -29,6 +33,7 @@ Rectangle {
 
         Tasklistview {
             id: tasklistview
+            orientation: ListView.Vertical
             Layout.fillHeight: true
             Layout.fillWidth: true
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
@@ -43,11 +48,11 @@ Rectangle {
         ToolBar {
             id: toolBar
             width: 200
-            rightPadding: 40
-            leftPadding: 40
-            bottomPadding: 20
-            topPadding: 20
-            Layout.fillHeight: false
+            Layout.minimumHeight: 24
+            rightPadding: 20
+            leftPadding: 20
+            Layout.maximumHeight: 30
+            Layout.fillHeight: true
             Layout.fillWidth: true
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
             background: Rectangle{
@@ -56,13 +61,18 @@ Rectangle {
 
             RowLayout {
                 id: rowLayout
+                height: 2
                 anchors.fill: parent
 
                 ToolButton {
                     id: up
+                    width: 24
+                    Layout.maximumHeight: 24
+                    Layout.maximumWidth: 24
+                    Layout.fillHeight: true
                     Layout.preferredHeight: image.implicitHeight
                     Layout.preferredWidth: image.implicitWidth
-                    Layout.fillWidth: false
+                    Layout.fillWidth: true
                     background: Image {
                         id:image
                         anchors.fill: parent
@@ -72,7 +82,11 @@ Rectangle {
 
                 ToolButton {
                     id: stop
-                    Layout.fillWidth: false
+                    width: 24
+                    Layout.maximumHeight: 24
+                    Layout.maximumWidth: 24
+                    Layout.fillHeight: true
+                    Layout.fillWidth: true
                     background: Image {
                         anchors.fill: parent
                         source: stop.pressed?"resourse/暂停-按下效果.png":"resourse/暂停.png"
@@ -81,7 +95,11 @@ Rectangle {
 
                 ToolButton {
                     id: start
-                    Layout.fillWidth: false
+                    width: 24
+                    Layout.maximumWidth: 24
+                    Layout.maximumHeight: 24
+                    Layout.fillHeight: true
+                    Layout.fillWidth: true
                     background: Image {
                         anchors.fill: parent
                         source: start.pressed?"resourse/开始-按下效果.png":"resourse/开始.png"
@@ -90,8 +108,12 @@ Rectangle {
 
                 ToolButton {
                     id: empty
+                    width: 24
+                    Layout.maximumHeight: 24
+                    Layout.maximumWidth: 24
+                    Layout.fillHeight: true
 
-                    Layout.fillWidth: false
+                    Layout.fillWidth: true
                     background: Image {
                         anchors.fill: parent
                         source: empty.pressed?"resourse/删除-按下效果.png":"resourse/删除.png"
@@ -100,7 +122,11 @@ Rectangle {
 
                 ToolButton {
                     id: more
-                    Layout.fillWidth: false
+                    width: 24
+                    Layout.maximumHeight: 24
+                    Layout.maximumWidth: 24
+                    Layout.fillHeight: true
+                    Layout.fillWidth: true
                     background: Image {
                         anchors.fill: parent
                         source: more.pressed?"resourse/更多-按下效果.png":"resourse/更多.png"

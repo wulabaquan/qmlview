@@ -1,34 +1,42 @@
 import QtQuick 2.4
 import QtQuick.Layouts 1.3
 Rectangle{
-    width: statusitem.width*2+100
-    height: (gridLayout.rows)*(statusitem.height)+100
+    width: 200
+    height: 65
     GridLayout {
         id: gridLayout
-        columnSpacing: 30
-        rowSpacing: 10
+        anchors.rightMargin: 5
+        anchors.leftMargin: 5
+        anchors.bottomMargin: 5
+        anchors.topMargin: 5
+        rowSpacing: 5
+        columnSpacing: 5
+        columns: 2
 
         rows: 2
-        flow: GridLayout.TopToBottom
         anchors.fill: parent
 
         Statusitem {
             id: statusitem
+            Layout.fillHeight: true
             Layout.fillWidth: true
         }
 
         Statusitem {
             id: statusitem1
+            Layout.fillHeight: true
             Layout.fillWidth: true
         }
 
         Statusitem {
             id: statusitem2
+            Layout.fillHeight: true
             Layout.fillWidth: true
         }
 
         Statusitem {
             id: statusitem3
+            Layout.fillHeight: true
             Layout.fillWidth: true
         }
 

@@ -1,7 +1,7 @@
 
-import QtQuick 2.4
+import QtQuick 2.7
 import QtQuick.Layouts 1.3
-import QtQuick.Controls 1.0 as Controls
+
 
 Rectangle {
     id: root
@@ -15,8 +15,12 @@ Rectangle {
         id: fileRow
         anchors.fill: parent
     Item {
-        height: stateinfo.height
+        Layout.fillHeight: true
         width: 10
+        height: 10
+        Layout.maximumHeight: 10
+        Layout.maximumWidth: 10
+        Layout.fillWidth: true
     }
 
         Rectangle {
@@ -24,13 +28,25 @@ Rectangle {
             width: 10
             height: 10
             color: selected ? "#80c342" : "#25a6e2"
+            Layout.fillWidth: true
+            Layout.maximumWidth: 10
+            Layout.maximumHeight: 10
+            Layout.fillHeight: true
         }
-
-        Text {
-            id: stateinfo
-            text: root.text
-            anchors.right: root.parent
-            font.pointSize: 12
+        Flow{
+            Layout.fillHeight: false
+            Layout.fillWidth: true
+            Text {
+                id: stateinfo
+                text: root.text
+                font.pixelSize: 14
+                fontSizeMode: Text.FixedSize
+                wrapMode: Text.WordWrap
+                Layout.fillWidth: true
+                Layout.maximumHeight: 10
+                verticalAlignment: Text.AlignVCenter
+                Layout.fillHeight: true
+            }
         }
 
     }

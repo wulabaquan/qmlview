@@ -179,6 +179,5 @@
         <file>Taskarea.qml</file>
         <file>Tasklistview.qml</file>
         <file>Tasklistmodel.qml</file>
-        <file>Test_taskarea.qml</file>
     </qresource>
 </RCC>

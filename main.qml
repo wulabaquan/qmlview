@@ -2,53 +2,85 @@ import QtQuick 2.6
 import QtQuick.Layouts 1.3
 Rectangle{
     id:root
-    width: 1000
-    height: 1000
+    width: 1300
+    height: 800
 
-    Toplogo {
-        id: toplogo
-        x: 8
-        y: 8
-    }
+    ColumnLayout {
+        id: columnLayout
+        anchors.fill: parent
+        spacing: 0
 
-    Cellview {
-        id: cellview
-        x: 30
-        y: 136
-        width: 686
-        height: 656
-    }
+        RowLayout {
+            id: rowLayout
+            width: root.width
+            Layout.fillWidth: false
+            spacing: 0
+            Layout.alignment: Qt.AlignLeft | Qt.AlignTop
 
-    Statusbar {
-        id: statusbar
-        x: 16
-        y: 832
-        width: 960
-        height: 108
-    }
+            Toplogo {
+                id: toplogo
+                Layout.fillHeight: true
+                Layout.fillWidth: true
+                Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
+            }
 
-    Taskarea {
-        id: taskarea
-        x: 751
-        y: 353
-        width: 225
-        height: 251
-    }
+            Menubtn {
+                id: menubtn
+                Layout.fillHeight: true
+                Layout.fillWidth: true
+            }
+        }
 
-    Menubtn {
-        id: menubtn
-        x: 285
-        y: 25
-        width: 759
-        height: 105
-    }
+        RowLayout {
+            id: rowLayout1
+            Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
 
-    Labelarea {
-        id: labelarea
-        x: 751
-        y: 200
-        width: 225
-        height: 120
+            ColumnLayout {
+                id: columnLayout1
+                width: 100
+                height: 100
+                Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
+                Layout.fillWidth: true
+                Layout.fillHeight: true
+
+                Cellview {
+                    id: cellview
+                    Layout.fillHeight: true
+                    Layout.fillWidth: true
+                    Layout.alignment: Qt.AlignHCenter | Qt.AlignTop
+                }
+
+                Statusbar {
+                    id: statusbar
+                    Layout.fillHeight: true
+                    Layout.fillWidth: true
+                    Layout.alignment: Qt.AlignHCenter | Qt.AlignBottom
+                }
+            }
+
+            ColumnLayout {
+                id: columnLayout2
+                spacing: labelarea.height*0.5
+                Layout.alignment: Qt.AlignHCenter | Qt.AlignTop
+                Layout.fillHeight: true
+                Layout.fillWidth: true
+
+                Labelarea {
+                    id: labelarea
+                    Layout.fillHeight: true
+                    Layout.fillWidth: true
+                    Layout.alignment: Qt.AlignHCenter | Qt.AlignTop
+                }
+
+                Taskarea {
+                    id: taskarea
+                    Layout.fillHeight: true
+                    Layout.fillWidth: true
+                    Layout.alignment: Qt.AlignHCenter | Qt.AlignBottom
+                }
+            }
+
+        }
     }
 
 
