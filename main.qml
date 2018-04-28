@@ -2,86 +2,103 @@ import QtQuick 2.6
 import QtQuick.Layouts 1.3
 Rectangle{
     id:root
-    width: 1300
-    height: 800
 
-    ColumnLayout {
-        id: columnLayout
+    RowLayout {
+        id: rowLayout
         anchors.fill: parent
-        spacing: 0
 
-        RowLayout {
-            id: rowLayout
-            width: root.width
-            Layout.fillWidth: false
-            spacing: 0
-            Layout.alignment: Qt.AlignLeft | Qt.AlignTop
+        Rectangle {
+            id: rectangle
+            width: 200
+            height: 200
+            color: "#ffffff"
+            Layout.fillHeight: true
+            Layout.fillWidth: true
+
+            Taskarea {
+                id: taskarea
+                x: 432
+                width: 198
+                height: 241
+                anchors.top: labelarea.top
+                anchors.topMargin: 126
+                anchors.bottom: parent.bottom
+                anchors.bottomMargin: 10
+                anchors.right: parent.right
+                anchors.rightMargin: 10
+            }
+            
+            Labelarea {
+                id: labelarea
+                x: 420
+                width: 212
+                anchors.top: menubtn.bottom
+                anchors.topMargin: 10
+                anchors.right: parent.right
+                anchors.rightMargin: 10
+            }
+
+            Statusbar {
+                id: statusbar
+                y: 388
+                height: 68
+                anchors.right: taskarea.left
+                anchors.rightMargin: 10
+                anchors.bottom: parent.bottom
+                anchors.bottomMargin: 10
+                anchors.left: parent.left
+                anchors.leftMargin: 10
+            }
+
+            Cellview {
+                id: cellview
+                anchors.top: toplogo.bottom
+                anchors.topMargin: 10
+                anchors.right: taskarea.left
+                anchors.rightMargin: 10
+                anchors.left: parent.left
+                anchors.leftMargin: 10
+                anchors.bottom: statusbar.top
+                anchors.bottomMargin: 10
+            }
+            
+            Menubtn {
+                id: menubtn
+                x: 210
+                width: 426
+                anchors.right: parent.right
+                anchors.rightMargin: 10
+                anchors.top: parent.top
+                anchors.topMargin: 10
+            }
 
             Toplogo {
                 id: toplogo
-                Layout.fillHeight: true
-                Layout.fillWidth: true
-                Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
+                width: 194
+                height: 90
+                anchors.left: parent.left
+                anchors.leftMargin: 10
+                anchors.top: parent.top
+                anchors.topMargin: 10
             }
 
-            Menubtn {
-                id: menubtn
-                Layout.fillHeight: true
-                Layout.fillWidth: true
-            }
-        }
-
-        RowLayout {
-            id: rowLayout1
-            Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
-
-            ColumnLayout {
-                id: columnLayout1
-                width: 100
-                height: 100
-                Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
-                Layout.fillWidth: true
-                Layout.fillHeight: true
-
-                Cellview {
-                    id: cellview
-                    Layout.fillHeight: true
-                    Layout.fillWidth: true
-                    Layout.alignment: Qt.AlignHCenter | Qt.AlignTop
-                }
-
-                Statusbar {
-                    id: statusbar
-                    Layout.fillHeight: true
-                    Layout.fillWidth: true
-                    Layout.alignment: Qt.AlignHCenter | Qt.AlignBottom
-                }
+            Item {
+                id: item1
+                y: 8
+                height: 92
+                anchors.right: menubtn.left
+                anchors.rightMargin: 10
+                anchors.left: toplogo.right
+                anchors.leftMargin: 10
             }
 
-            ColumnLayout {
-                id: columnLayout2
-                spacing: labelarea.height*0.5
-                Layout.alignment: Qt.AlignHCenter | Qt.AlignTop
-                Layout.fillHeight: true
-                Layout.fillWidth: true
 
-                Labelarea {
-                    id: labelarea
-                    Layout.fillHeight: true
-                    Layout.fillWidth: true
-                    Layout.alignment: Qt.AlignHCenter | Qt.AlignTop
-                }
 
-                Taskarea {
-                    id: taskarea
-                    Layout.fillHeight: true
-                    Layout.fillWidth: true
-                    Layout.alignment: Qt.AlignHCenter | Qt.AlignBottom
-                }
-            }
+
 
         }
     }
+
 
 
 

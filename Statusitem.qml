@@ -5,48 +5,40 @@ import QtQuick.Layouts 1.3
 
 Rectangle {
     id: root
-    height: 30
+//    height: 30
+//    width: 200
     property string text: "stateinfo"
     property bool selected: false
     signal clicked()
     width: 200
+    height: 30
+
     border.color: "black"
     RowLayout {
         id: fileRow
         anchors.fill: parent
-    Item {
-        Layout.fillHeight: true
-        width: 10
-        height: 10
-        Layout.maximumHeight: 10
-        Layout.maximumWidth: 10
-        Layout.fillWidth: true
-    }
+        Item {
+            width: root.width/200*10
+            height: root.height/200*10
+        }
 
         Rectangle {
             id: rectangle2
-            width: 10
-            height: 10
+            width: root.width/200*10
+            height: root.height/200*10
             color: selected ? "#80c342" : "#25a6e2"
-            Layout.fillWidth: true
-            Layout.maximumWidth: 10
-            Layout.maximumHeight: 10
-            Layout.fillHeight: true
         }
-        Flow{
-            Layout.fillHeight: false
-            Layout.fillWidth: true
-            Text {
-                id: stateinfo
-                text: root.text
-                font.pixelSize: 14
-                fontSizeMode: Text.FixedSize
-                wrapMode: Text.WordWrap
-                Layout.fillWidth: true
-                Layout.maximumHeight: 10
-                verticalAlignment: Text.AlignVCenter
-                Layout.fillHeight: true
-            }
+
+        Text {
+            id: stateinfo
+            width: root.width/200*63
+            height: root.height/200*14
+            text: root.text
+            horizontalAlignment: Text.AlignLeft
+            font.pixelSize: root.width/200*14
+            fontSizeMode: Text.FixedSize
+            wrapMode: Text.WordWrap
+            verticalAlignment: Text.AlignVCenter
         }
 
     }

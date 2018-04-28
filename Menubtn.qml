@@ -3,15 +3,17 @@ import QtQuick 2.4
 import QtQuick.Layouts 1.3
 import QtQuick.Controls 2.1
 Rectangle{
+    id: root
     width: 450
     height: 90
 
     RowLayout {
         id: rowLayout
+        width: 450
         spacing: 1
-        anchors.leftMargin: 5
+        anchors.leftMargin: 15
         anchors.topMargin: 5
-        anchors.rightMargin: 5
+        anchors.rightMargin: 15
         anchors.bottomMargin: 5
         anchors.fill: parent
 
@@ -27,7 +29,7 @@ Rectangle{
         }
 
         ToolSeparator {
-            width: 1
+            Layout.fillWidth: true
             Layout.fillHeight: true
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
             bottomPadding: 20
@@ -46,7 +48,7 @@ Rectangle{
         }
 
         ToolSeparator {
-            width: 1
+            Layout.fillWidth: true
             Layout.fillHeight: true
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
             topPadding: 20
@@ -66,6 +68,7 @@ Rectangle{
 
         ToolSeparator {
             width: 1
+            Layout.fillWidth: true
             Layout.fillHeight: true
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
             topPadding: 20
@@ -85,6 +88,7 @@ Rectangle{
 
         ToolSeparator {
             width: 1
+            Layout.fillWidth: true
             Layout.fillHeight: true
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
             topPadding: 20

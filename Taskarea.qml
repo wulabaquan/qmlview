@@ -2,37 +2,32 @@ import QtQuick 2.0
 import QtQuick.Layouts 1.3
 import QtQuick.Controls 2.1
 Rectangle {
-    width: 400
-    height: 400
-    radius: 10
+    width: 150
+    height: 150
+    radius: 5
     border.color:"black"
     border.width: 1
 
     ColumnLayout {
         id: columnLayout
-        anchors.topMargin: 30
-        anchors.bottomMargin: 30
-        anchors.leftMargin: 20
-        anchors.rightMargin: 20
-        spacing: 10
         anchors.fill: parent
 
         Label {
             id: label
             text: qsTr("任务列表")
-            Layout.maximumHeight: 30
+            fontSizeMode: Text.Fit
             Layout.fillHeight: true
             Layout.fillWidth: true
             verticalAlignment: Text.AlignVCenter
             color: "lightblue"
             horizontalAlignment: Text.AlignHCenter
-            Layout.preferredHeight: 20
-            Layout.preferredWidth: 88
+            Layout.preferredHeight: 30
             Layout.alignment: Qt.AlignHCenter | Qt.AlignTop
         }
 
         Tasklistview {
             id: tasklistview
+            Layout.preferredHeight: 145
             orientation: ListView.Vertical
             Layout.fillHeight: true
             Layout.fillWidth: true
@@ -41,37 +36,28 @@ Rectangle {
         
         ToolSeparator {
             id: toolSeparator
+            Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
+            Layout.preferredHeight: 5
+            Layout.fillHeight: true
             Layout.fillWidth: true
             orientation:Qt.Horizontal
         }
         
         ToolBar {
             id: toolBar
-            width: 200
-            Layout.minimumHeight: 24
-            rightPadding: 20
-            leftPadding: 20
-            Layout.maximumHeight: 30
-            Layout.fillHeight: true
-            Layout.fillWidth: true
-            Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
+            padding: 5
+            Layout.alignment: Qt.AlignHCenter | Qt.AlignBottom
             background: Rectangle{
                 color: "white"
             }
 
             RowLayout {
                 id: rowLayout
-                height: 2
                 anchors.fill: parent
 
                 ToolButton {
                     id: up
-                    width: 24
-                    Layout.maximumHeight: 24
-                    Layout.maximumWidth: 24
                     Layout.fillHeight: true
-                    Layout.preferredHeight: image.implicitHeight
-                    Layout.preferredWidth: image.implicitWidth
                     Layout.fillWidth: true
                     background: Image {
                         id:image
@@ -82,9 +68,6 @@ Rectangle {
 
                 ToolButton {
                     id: stop
-                    width: 24
-                    Layout.maximumHeight: 24
-                    Layout.maximumWidth: 24
                     Layout.fillHeight: true
                     Layout.fillWidth: true
                     background: Image {
@@ -95,9 +78,6 @@ Rectangle {
 
                 ToolButton {
                     id: start
-                    width: 24
-                    Layout.maximumWidth: 24
-                    Layout.maximumHeight: 24
                     Layout.fillHeight: true
                     Layout.fillWidth: true
                     background: Image {
@@ -108,9 +88,6 @@ Rectangle {
 
                 ToolButton {
                     id: empty
-                    width: 24
-                    Layout.maximumHeight: 24
-                    Layout.maximumWidth: 24
                     Layout.fillHeight: true
 
                     Layout.fillWidth: true
@@ -122,9 +99,6 @@ Rectangle {
 
                 ToolButton {
                     id: more
-                    width: 24
-                    Layout.maximumHeight: 24
-                    Layout.maximumWidth: 24
                     Layout.fillHeight: true
                     Layout.fillWidth: true
                     background: Image {
