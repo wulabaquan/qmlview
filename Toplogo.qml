@@ -1,7 +1,10 @@
 import QtQuick 2.4
+import QtQuick.Layouts 1.3
 Rectangle{
-    width: 271
-    height: 102
+//    width: 271
+//    height: 102
+    implicitHeight: image.implicitHeight
+    implicitWidth: image.implicitWidth
     MouseArea {
         id: mouseArea
         anchors.fill: parent

@@ -2,14 +2,10 @@ import QtQuick 2.0
 import QtQuick.Layouts 1.3
 
 Rectangle {
-    width: 227
-    height: 120
+    width: rowLayout.implicitWidth
+    height: rowLayout.implicitHeight
     RowLayout {
         id: rowLayout
-        anchors.leftMargin: 5
-        anchors.topMargin: 0
-        anchors.rightMargin: 5
-        anchors.bottomMargin: 0
         anchors.fill: parent
 
         Labelitem {

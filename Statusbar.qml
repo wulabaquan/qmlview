@@ -1,19 +1,11 @@
 import QtQuick 2.4
 import QtQuick.Layouts 1.3
 Rectangle{
-    width: 200
-    height: 65
+    width: statusitem.implicitWidth
+    height: statusitem.implicitHeight*2
     GridLayout {
         id: gridLayout
-        anchors.rightMargin: 5
-        anchors.leftMargin: 5
-        anchors.bottomMargin: 5
-        anchors.topMargin: 5
-        rowSpacing: 5
-        columnSpacing: 5
-        columns: 2
-
-        rows: 2
+        columns: 1
         anchors.fill: parent
 
         Statusitem {
@@ -27,19 +19,6 @@ Rectangle{
             Layout.fillHeight: true
             Layout.fillWidth: true
         }
-
-        Statusitem {
-            id: statusitem2
-            Layout.fillHeight: true
-            Layout.fillWidth: true
-        }
-
-        Statusitem {
-            id: statusitem3
-            Layout.fillHeight: true
-            Layout.fillWidth: true
-        }
-
     }
 
 }

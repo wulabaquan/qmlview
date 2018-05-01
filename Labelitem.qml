@@ -3,15 +3,13 @@ import QtQuick.Controls 2.1
 
 ToolButton {
     id:root
-    width: image.implicitWidth
-    height: image.implicitHeight
+    width: 61
+    height: 105
     property string normallabel: ""
     property string pressedlabel: ""
     property bool clicked : false
     background: Image {
         id:image
-        fillMode: Image.PreserveAspectFit
-        anchors.fill: parent
         source:root.pressed?pressedlabel:normallabel
     }
 }

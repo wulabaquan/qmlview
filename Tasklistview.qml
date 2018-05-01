@@ -1,7 +1,7 @@
 import QtQuick 2.7
 
 ListView {
-    model: Tasklistmodel{}
+ //   model: Tasklistmodel{}
     delegate:Text {
         text: action+":"+message
     }
