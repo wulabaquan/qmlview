@@ -180,4 +180,11 @@
         <file>Tasklistview.qml</file>
         <file>Tasklistmodel.qml</file>
     </qresource>
+    <qresource prefix="/dialog">
+        <file>Dialogtest.qml</file>
+        <file>Dialogautoremove.qml</file>
+        <file>Dialogautoenterin.qml</file>
+        <file>Dialogcylcontrol.qml</file>
+        <file>Dialogcylitem.qml</file>
+    </qresource>
 </RCC>

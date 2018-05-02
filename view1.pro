@@ -4,7 +4,8 @@ QT += qml quick
 QT += widgets
 CONFIG += c++11
 
-SOURCES += main.cpp
+SOURCES += main.cpp \
+    cqmlinteract.cpp
 
 RESOURCES += \
     qml.qrc
@@ -32,4 +33,11 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 DISTFILES += \
-    Main2.qml
+    Main2.qml \
+    Autoremovedialog.qml \
+    Dialogautoremove.qml \
+    Dialogtest.qml \
+    Dialogcylcontrol.qml
+
+HEADERS += \
+    cqmlinteract.h
